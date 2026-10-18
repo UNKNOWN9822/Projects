@@ -9,7 +9,7 @@ Además:
 ● Los sábados, domingos y feriados se recarga un 50% sobre el valor de la visita.
 """
 
-visita = {"zona": "fuera", "trabajo_mismo_dia": False, "es_fin_de_semana": False}
+visita = {"zona": "central", "trabajo_mismo_dia": True, "es_fin_de_semana": False}
 
 resultado = calcular_visita(visita)
-assert resultado == 18000
+assert resultado == 0
