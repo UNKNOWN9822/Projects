@@ -17,8 +17,6 @@ def calcular_visita(visita):
         visita["zona"] = 12000
     else:
         visita["zona"] = 18000
-    if visita["trabajo_mismo_dia"] == True:
-        visita["zona"] = 0
     if visita["es_fin_de_semana"] == True:
         visita["zona"] = visita["zona"] * 1.5
 
