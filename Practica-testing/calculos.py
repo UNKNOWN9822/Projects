@@ -17,16 +17,18 @@ def calcular_subtotal(items):
         subtotal += item["precio"] * item["cantidad"]
     return subtotal
 
-def calcular_visita(visita):
-    if visita["zona"] == "central":
-        visita["zona"] = 8000
-    elif visita["zona"] == "periferica":
-        visita["zona"] = 12000
-    else:
-        visita["zona"] = 18000
-    if visita["es_fin_de_semana"] == True:
-        visita["zona"] = visita["zona"] * 1.5
+def calcular_visita(zona, trabajo_mismo_dia, es_fin_de_semana):
+    if zona == "centrica":
+        zona = 8000
+    elif zona == "periferica":
+        zona = 12000
+    elif zona == "exterior":
+        zona = 18000
+    if trabajo_mismo_dia == True:
+        zona = zona * 0
+    if es_fin_de_semana == True:
+        zona = zona * 1.50
 
-    return visita["zona"]
+    return zona
 
     
