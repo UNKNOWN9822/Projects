@@ -30,5 +30,10 @@ def calcular_visita(zona, trabajo_mismo_dia, es_fin_de_semana):
         zona = zona * 1.50
 
     return zona
-
-    
+class HorarioInvalidoError(ValueError):
+		pass
+def validar_turno(fecha, hora):
+    if hora <= "18:00" and hora >= "10:00": 
+        return "todo correcto y agendado"
+    else: 
+        raise HorarioInvalidoError("Horario fuera del rango permitido")
